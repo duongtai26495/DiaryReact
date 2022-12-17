@@ -1,8 +1,13 @@
 import React from 'react'
+import ListDiaryCard from '../components/ListDiaryCard'
 
 const HomePage = () => {
+
+
   return (
-    <div>HomePage</div>
+    <div className='container m-auto'>
+      <ListDiaryCard />
+    </div>
   )
 }
 

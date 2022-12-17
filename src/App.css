@@ -1,3 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.diary-card:hover{
+    transform: translateY(-10px);
+    
+}
+.diary-card{
+    transition: .3s ease-in-out;
+    break-inside: avoid;
+}
+
+.diary-image-wrapper{
+    height: 300px;
+    object-fit: cover;
+}
+
+.diary-card-author-image{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.diary-author-image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.feature-image-diary{
+    height: 500px;
+    object-fit: cover;
+}

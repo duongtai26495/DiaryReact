@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { HOST_URL } from '../assets/constants/api-constants'
+import { Snippet } from '../assets/snippets'
 
 const DiaryCard = ({data}) => {
 
@@ -30,7 +31,7 @@ const DiaryCard = ({data}) => {
           {
             diary.content?.length > 100
               &&
-              <span className='text-sm text-cyan-700'><em>read more</em></span>
+              <span className='text-sm text-cyan-700'><em>... {Snippet.readMore}</em></span>
           }
     </div>
     <div className='p-3 flex flex-row justify-start items-center w-full'>

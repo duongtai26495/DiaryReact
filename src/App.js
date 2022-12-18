@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { loadAllCategory, loadAllDisplayDiary } from './api/functions';
 import './App.css';
 import TopHeader from './components/TopHeader';
-import { CategoryPage, DiaryPage, HomePage, ResultSearchPage, AuthenPage } from './screens';
+import { CategoryPage, DiaryPage, HomePage, ResultSearchPage, AuthenPage, NewDiaryPage } from './screens';
 import { useStore } from './store';
 import { load_all_diaries, load_category } from './store/actions';
 
@@ -38,6 +38,7 @@ function App() {
         <Route path='/category/id=:id' element={<CategoryPage />} />
         <Route path='/search/result' element={<ResultSearchPage />} />
         <Route path='/authen' element={<AuthenPage />} />
+        <Route path='/diary/new' element={<NewDiaryPage />} />
       </Routes>
       </div>
     </div>

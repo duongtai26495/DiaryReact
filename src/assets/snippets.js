@@ -22,5 +22,11 @@ export const Snippet = {
     LoginButton : "Đăng nhập",
     RegisterButton : "Tham gia ngay",
     ForgetPassword : "Quên mật khẩu?",
+    NEWDIARY : "Nhật ký mới",
+    TITLE : "Hôm nay của bạn như thế nào ?",
+    SubmitDiary : "Lưu lại",
+    CONTENT : "Nói một chút về nó đi...",
+    ADD : "Thêm",
+    SelectCategory : "Chọn danh mục"
     
 }

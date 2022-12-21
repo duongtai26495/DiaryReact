@@ -131,23 +131,42 @@ const getAccessToken = async (user) => {
 }
 
 const loadUserLoginInfo = async (data) => {
-  let url = HOST_URL + "user/profile?username="+data.username
+  let url = HOST_URL + "user/profile?username=" + data.username
   var config = {
     method: 'GET',
     url,
-    headers: { 
-      'Authorization': 'Bearer '+data.access_token
+    headers: {
+      'Authorization': 'Bearer ' + data.access_token
     }
   };
-  
+
   return await axios(config)
-  .then(function (response) {
-    return response.data
-  })
-  .catch(function (error) {
-    return error
-  });
-  
+    .then(function (response) {
+      return response.data
+    })
+    .catch(function (error) {
+      return error
+    });
+
+}
+
+const activeUserByKey = async (key) => {
+  let url = HOST_URL + "user/active?code=" + key
+
+  var config = {
+    method: 'GET',
+    url,
+    headers: {}
+  };
+
+  return await axios(config)
+    .then(function (response) {
+      return response.status
+    })
+    .catch(function (error) {
+      return error
+    });
+
 }
 export {
   loadAllDisplayDiary,
@@ -157,5 +176,6 @@ export {
   loadDiaryByCategory,
   loadSearchResult,
   getAccessToken,
-  loadUserLoginInfo
+  loadUserLoginInfo,
+  activeUserByKey
 }

@@ -31,10 +31,7 @@ const NewDiaryPage = () => {
         }
       });
       if (check == false) {
-        var cate = {
-          "id": category
-        }
-        var selectCate = list_categories.filter(p => p.id === cate.id)
+        var selectCate = list_categories.filter(p => p.id === category.id)
         setCategories([...categories, selectCate[0]])
       }
 
@@ -71,7 +68,7 @@ const NewDiaryPage = () => {
         <label htmlFor='category my-1'>{Snippet.Category} : </label>
         <div className='w-full flex flex-row gap-2'>
           <select id='category' className='w-full p-2 border bg-slate-200 rounded mb-2' value={category} onChange={(e) => setCategory(e.target.value)}>
-          <option hidden >{Snippet.SelectCategory}</option>
+            <option hidden >{Snippet.SelectCategory}</option>
             {
               list_categories &&
               list_categories?.map((cate, index) => {
@@ -87,16 +84,16 @@ const NewDiaryPage = () => {
         {
           categories.length > 0 &&
           <div className='w-full flex flex-row flex-wrap border rounded-md'>
-          {
-          categories?.map((cate, index)=>{
-            return(
-            <p className='p-2 border rounded-md bg-white m-1 w-fit ' key={index}>{cate.name}
-              <span onClick={() => removeCategory(cate.id)} className='ml-1 text-red-300 hover:text-red-600 cursor-pointer transition-all'>X</span>
-            </p>
-            )
-          })
-          }
-            </div>
+            {
+              categories?.map((cate, index) => {
+                return (
+                  <p className='p-2 border rounded-md bg-white m-1 w-fit ' key={index}>{cate.name}
+                    <span onClick={() => removeCategory(cate.id)} className='ml-1 text-red-300 hover:text-red-600 cursor-pointer transition-all'>X</span>
+                  </p>
+                )
+              })
+            }
+          </div>
         }
 
       </div>

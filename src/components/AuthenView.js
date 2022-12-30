@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import LoginForm from '../components/LoginForm'
 import RegisterForm from '../components/RegisterForm'
 import { Snippet } from '../assets/snippets'
+import { useStore } from '../store'
 
 const AuthenView = () => {
 
     const [authenSwitch, setSwitch] = useState(true)
-
-
+ 
 
     return (
         <div className='container'>

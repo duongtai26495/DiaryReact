@@ -27,6 +27,10 @@ export const Snippet = {
     SubmitDiary : "Lưu lại",
     CONTENT : "Nói một chút về nó đi...",
     ADD : "Thêm",
-    SelectCategory : "Chọn danh mục"
+    SelectCategory : "Chọn danh mục",
+    SignOut: "Đăng xuất",
+    SelectGender: "Chọn giới tính",
+    REGISTERFAIL : "Đăng ký thất bại, hãy thử lại",
+    Loading : "Xin chờ..."
     
 }

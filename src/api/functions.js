@@ -168,6 +168,44 @@ const activeUserByKey = async (key) => {
     });
 
 }
+
+const registerNewAccount = async (User) => {
+  let url = HOST_URL + "user/register"
+
+  var data = User
+  
+  var config = {
+    method: 'POST',
+    url,
+    headers: { 
+      'Content-Type': 'application/json'
+    },
+    data
+  };
+  try {
+    return await axios(config)
+    .then(function (response) {
+      return response
+    })
+   
+  } catch (error) {
+    if(error.response)
+    {
+      console.log("Response", error.response)
+    }
+    else if(error.request)
+    {
+      console.log("request", error.request)
+    }else{
+      console.log("Other", error)
+    }
+  }
+
+}
+
+const signOut = () => {
+  localStorage.clear();
+}
 export {
   loadAllDisplayDiary,
   loadDiaryById,
@@ -177,5 +215,7 @@ export {
   loadSearchResult,
   getAccessToken,
   loadUserLoginInfo,
-  activeUserByKey
+  activeUserByKey,
+  signOut,
+  registerNewAccount
 }

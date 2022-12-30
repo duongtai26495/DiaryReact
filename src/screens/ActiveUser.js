@@ -1,9 +1,11 @@
 import React, {useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import { activeUserByKey } from '../api/functions'
+import { useStore } from '../store'
 
 const ActiveUser = () => {
 
+  const [state, dispatch] = useStore()
     const {key} = useParams()
 
     useEffect(()=>{

@@ -5,8 +5,7 @@ import ProfileView from '../components/ProfileView'
 
 const AuthenPage = () => {
 
-    useEffect(()=>{
-        console.log(localStorage.getItem(LOGIN_STATE))
+    useEffect(()=>{ 
     },[localStorage.getItem(LOGIN_STATE)])
 
     return (
